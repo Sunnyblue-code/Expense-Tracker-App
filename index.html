@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny's Expense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sunny's Expense Tracker</h1>
+
+        <div class="top-section">
+            <div class="left-section">
+                <div class="balance-card">
+                    <h2>Current Balance</h2>
+                    <p id="balance">$0.00</p>
+                </div>
+
+                <div class="summary-cards">
+                    <div class="card">
+                        <h3>Total Income</h3>
+                        <p id="income-total">$0.00</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Expenses</h3>
+                        <p id="expense-total">$0.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="form-container">
+                    <h2>Add Transaction</h2>
+                    <form id="transaction-form">
+                        <input type="text" id="description" placeholder="Description" required>
+                        <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+                        <select id="type" required>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                        <select id="category" required>
+                            <option value="salary">Salary</option>
+                            <option value="food">Food</option>
+                            <option value="transport">Transport</option>
+                            <option value="utilities">Utilities</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <button type="submit">Add Transaction</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="transactions-container">
+            <h2>Transactions</h2>
+            <div id="transaction-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
